@@ -54,10 +54,10 @@ const Footer: React.FC = () => {
 
         <div className="pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
           <p>© 2023 捷耀企业ERP解决方案. 保留所有权利.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          {/*<div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="hover:text-slate-900">隐私政策</Link>
             <Link to="/terms" className="hover:text-slate-900">服务条款</Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

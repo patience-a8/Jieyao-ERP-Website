@@ -66,7 +66,7 @@ const FeaturesPage: React.FC = () => {
                   {feature.description}
                 </p>
                 <div className="mt-4">
-                  <a href="#" className="inline-flex items-center text-brand-600 font-medium hover:text-brand-700">
+                  <a href="/contact" className="inline-flex items-center text-brand-600 font-medium hover:text-brand-700">
                     了解更多 <ChevronRight size={16} className="ml-1" />
                   </a>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Award, Globe, Heart } from 'lucide-react';
+import { Users, Award, Globe, Heart, Building2, Target, Zap } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   return (
@@ -39,6 +39,59 @@ const AboutPage: React.FC = () => {
                   </div>
               </div>
           </div>
+      </div>
+
+      {/* Company Profile / Detailed Intro Section - NEW ADDITION */}
+      <div className="py-20 overflow-hidden bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+            {/* Image Side */}
+            <div className="relative mb-12 lg:mb-0">
+               <div className="absolute inset-0 bg-brand-200 rounded-3xl transform rotate-3 scale-105 opacity-50"></div>
+               <img 
+                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2301&q=80" 
+                 alt="捷耀科技办公环境" 
+                 className="relative rounded-3xl shadow-2xl w-full object-cover h-[500px]"
+               />
+            </div>
+            
+            {/* Text Side */}
+            <div>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-brand-100 text-brand-700 font-semibold text-sm mb-6">
+                <Building2 className="w-4 h-4 mr-2" />
+                关于捷耀科技
+              </div>
+              <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl mb-6">
+                十年磨一剑，<br/>
+                <span className="text-brand-600">致力成为企业数字化转型的领航者</span>
+              </h2>
+              <div className="prose prose-lg text-slate-600 space-y-6">
+                <p>
+                  捷耀科技（Jieyao Tech）成立于2013年，总部位于江苏南京。作为国内领先的企业级SaaS服务商，我们始终坚持以“技术驱动商业革新”为核心理念，深耕ERP领域十余载。
+                </p>
+                <p>
+                  我们的研发团队由来自阿里、华为等一线互联网大厂的资深架构师领衔。通过将云计算、大数据、人工智能等前沿技术与传统企业管理深度融合，捷耀打造出了具有高度灵活性、扩展性和安全性的新一代ERP系统。
+                </p>
+                <p>
+                  截至目前，捷耀ERP已累计服务超过5000家企业客户，覆盖制造、零售、物流、服务等多个行业。我们不仅提供软件工具，更输出先进的管理思维，帮助中国企业在数字化浪潮中降本增效，重塑核心竞争力。
+                </p>
+              </div>
+              
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                 <div className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <Target className="w-8 h-8 text-brand-600 mb-2" />
+                    <h4 className="font-bold text-slate-900">企业使命</h4>
+                    <p className="text-sm text-slate-500">让管理更智能，让商业更简单</p>
+                 </div>
+                 <div className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <Zap className="w-8 h-8 text-brand-600 mb-2" />
+                    <h4 className="font-bold text-slate-900">企业愿景</h4>
+                    <p className="text-sm text-slate-500">构建万物互联的商业操作系统</p>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Values */}
