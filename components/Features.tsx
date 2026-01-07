@@ -1,37 +1,39 @@
+
 import React from 'react';
-import { Package, DollarSign, Users, PieChart, ShoppingCart, Briefcase } from 'lucide-react';
+import { Package, DollarSign, Users, PieChart, Factory, Truck } from 'lucide-react';
 import { Feature } from '../types';
 
 const featuresList: Feature[] = [
   {
-    title: '库存管理',
-    description: '实时跟踪库存水平，自动化补货流程，优化库存周转率，减少库存成本。',
+    title: '智能生产管理',
+    description: '涵盖生产计划、车间调度及工单跟踪。支持BOM多级管理，实现排产自动化，显著提升产线利用率。',
+    icon: Factory,
+  },
+  {
+    title: '高效库存管控',
+    description: '实时跟踪原材料与成品库位。集成PDA扫码出入库，支持安全库存预警，优化资金周转。',
     icon: Package,
   },
   {
-    title: '财务管理',
-    description: '集成总账、应收应付、固定资产等模块，提供全面的财务可视化和分析。',
+    title: '全流程供应链',
+    description: '打通采购、销售、物流全链路。供应商评估体系结合合同管理，降低采购成本，提升交付可靠性。',
+    icon: Truck,
+  },
+  {
+    title: '精细财务核算',
+    description: '集成总账与成本中心，支持业财一体化同步。自动生成多维度财务报表，确保经营数据透明。',
+    // Added missing icon property
     icon: DollarSign,
   },
   {
-    title: '人力资源管理',
-    description: '从招聘到退休的全周期员工管理，包括考勤、薪资、绩效和培训等。',
+    title: '人力资源协同',
+    description: '覆盖考勤排班、绩效考核与全薪资计算。员工自助门户提升管理效率，助力企业人才梯队建设。',
     icon: Users,
   },
   {
-    title: '数据分析',
-    description: '强大的报表和仪表板功能，提供实时业务洞察，支持数据驱动决策。',
+    title: 'BI决策看板',
+    description: '将海量业务数据转化为实时图形化分析报告，关键指标一眼掌握，助力管理层科学决策。',
     icon: PieChart,
-  },
-  {
-    title: '采购管理',
-    description: '自动化采购流程，供应商管理，采购订单跟踪和发票匹配。',
-    icon: ShoppingCart,
-  },
-  {
-    title: '项目管理',
-    description: '项目规划、资源分配、进度跟踪和成本控制的一体化解决方案。',
-    icon: Briefcase,
   },
 ];
 
@@ -42,10 +44,10 @@ const Features: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-base text-brand-600 font-semibold tracking-wide uppercase">核心模块</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-            全面覆盖企业运营
+            专为现代化企业打造的数字化基座
           </p>
           <p className="mt-4 max-w-2xl text-xl text-slate-500 mx-auto">
-            捷耀ERP提供全方位的管理工具，打破部门壁垒，实现信息高度共享。
+            捷耀ERP提供从生产到销售的一体化闭环管理，打破信息孤岛，实现真正的效率跨越。
           </p>
         </div>
 
@@ -57,7 +59,7 @@ const Features: React.FC = () => {
             >
               <div>
                 <span className="rounded-xl inline-flex p-3 bg-brand-50 text-brand-600 ring-4 ring-white group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
-                  <feature.icon className="h-8 w-8" aria-hidden="true" />
+                  {feature.icon ? <feature.icon className="h-8 w-8" aria-hidden="true" /> : <DollarSign className="h-8 w-8" />}
                 </span>
               </div>
               <div className="mt-6">

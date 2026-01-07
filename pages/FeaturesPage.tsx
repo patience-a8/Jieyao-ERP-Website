@@ -1,37 +1,37 @@
 import React from 'react';
-import { Package, DollarSign, Users, PieChart, ShoppingCart, Briefcase, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { Package, DollarSign, Users, PieChart, Factory, Truck, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { Feature } from '../types';
 
 const featuresList: Feature[] = [
   {
-    title: '智能库存管理',
-    description: '采用先进的预测算法，实时跟踪库存水平。支持多仓库管理、批次追踪、序列号管理。系统自动计算安全库存，触发智能补货建议，有效降低库存积压与缺货风险。',
+    title: '柔性生产制造系统',
+    description: '支持多种生产模式（MTS/MTO）。通过MRP运算精准规划生产物料，实时监控设备状态与生产工序进度。内置QMS质量管理体系，确保每一道工序都符合行业标准。',
+    icon: Factory,
+  },
+  {
+    title: '智慧仓储与WMS',
+    description: '多仓库实时互通，支持条码/RFID自动化作业。系统化管理批次、保质期及库龄。智能拣货算法提升200%出入库效率，彻底告别“找货难”。',
     icon: Package,
   },
   {
-    title: '全维度财务管控',
-    description: '深度集成总账、应收应付、固定资产与税务管理。支持多币种核算，实时生成资产负债表与损益表。自动化的财务流程减少人工录入错误，确保合规性。',
-    icon: DollarSign,
+    title: '端到端供应链协同',
+    description: '一键生成采购计划，与外部供应商实现数据互联。从销售订单下达到物流跟踪，全生命周期可视化，大幅缩减交货周期。',
+    icon: Truck,
   },
   {
-    title: '人力资本管理 (HCM)',
-    description: '覆盖员工全生命周期管理。从智能招聘、入职培训到绩效考核、薪资计算。提供自助服务门户，提升员工满意度，并帮助企业优化人才结构。',
-    icon: Users,
-  },
-  {
-    title: '商业智能 (BI) 分析',
-    description: '内置强大的报表引擎，提供数百种预设报表模板。支持拖拽式自定义仪表板，通过可视化图表实时监控关键绩效指标 (KPI)，辅助管理层精准决策。',
+    title: '智能报表与BI看板',
+    description: '预设生产监控、财务分析、销售日报等多个专题仪表盘。支持移动端推送重要业务预警，让管理层随时随地掌握经营动脉。',
     icon: PieChart,
   },
   {
-    title: '供应链与采购',
-    description: '端到端的供应链可视性。自动化采购流程，从请购单到采购订单、收货、质检及发票校验。内置供应商评估体系，帮助企业筛选优质合作伙伴。',
-    icon: ShoppingCart,
+    title: '业财一体化财务中心',
+    description: '实现业务发生即财务入账。自动结转成本，支持多级财务审核流。深度对接国内主流税务系统，实现一键报税，合规高效。',
+    icon: DollarSign,
   },
   {
-    title: '项目生命周期管理',
-    description: '专为项目型企业设计。集成项目计划、资源调度、工时记录与成本核算。实时跟踪项目进度与盈亏状况，确保项目按时按质交付。',
-    icon: Briefcase,
+    title: 'HCM全流程人才管理',
+    description: '从人才画像精准招聘到员工绩效全量化考核。不仅是考勤工具，更是企业组织发展的加速器，助力构建高绩效团队。',
+    icon: Users,
   },
 ];
 
@@ -42,10 +42,10 @@ const FeaturesPage: React.FC = () => {
       <div className="bg-slate-50 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-extrabold text-slate-900 sm:text-5xl">
-            全功能模块，<span className="text-brand-600">无限可能</span>
+            全模块覆盖，<span className="text-brand-600">重塑企业管理效能</span>
           </h1>
           <p className="mt-4 text-xl text-slate-500 max-w-3xl mx-auto">
-            捷耀ERP不仅仅是一个软件，它是您企业运营的数字神经系统。探索我们强大的功能模块，看看我们如何改变您的工作方式。
+            捷耀ERP将分散的业务单元整合为统一的高效运作系统。无论您是追求极致效率的制造商，还是强调敏捷反应的贸易商，都能找到最契合的方案。
           </p>
         </div>
       </div>
@@ -66,9 +66,9 @@ const FeaturesPage: React.FC = () => {
                   {feature.description}
                 </p>
                 <div className="mt-4">
-                  <a href="/contact" className="inline-flex items-center text-brand-600 font-medium hover:text-brand-700">
-                    了解更多 <ChevronRight size={16} className="ml-1" />
-                  </a>
+                  <button className="inline-flex items-center text-brand-600 font-medium hover:text-brand-700">
+                    了解模块详情 <ChevronRight size={16} className="ml-1" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -81,12 +81,12 @@ const FeaturesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="lg:grid lg:grid-cols-2 gap-16 items-center">
              <div>
-               <h2 className="text-3xl font-bold mb-6">无缝集成您的现有生态</h2>
+               <h2 className="text-3xl font-bold mb-6">更强的兼容性，更广的连接</h2>
                <p className="text-slate-400 text-lg mb-8">
-                 不要抛弃您喜爱的工具。捷耀ERP提供强大的API和预构建的连接器，可以与主流CRM、电商平台、银行系统和办公软件完美互通。
+                 捷耀ERP支持与各行业主流软件及硬件系统的深度集成。通过标准API接口，您可以轻松连接现有的办公生态。
                </p>
                <ul className="space-y-3">
-                 {['Salesforce & HubSpot CRM', 'Shopify & WooCommerce', '钉钉 & 企业微信', 'Office 365 & Google Workspace'].map(item => (
+                 {['PLM/MES 生产执行系统', '金蝶/用友财务数据迁移', '主流电商平台订单抓取', '工业物联网传感器接入'].map(item => (
                    <li key={item} className="flex items-center text-brand-100">
                      <CheckCircle2 size={20} className="mr-3 text-brand-400" />
                      {item}
@@ -96,12 +96,12 @@ const FeaturesPage: React.FC = () => {
              </div>
              <div className="mt-10 lg:mt-0 bg-slate-800 p-8 rounded-2xl border border-slate-700">
                 <div className="grid grid-cols-2 gap-4">
-                   <div className="bg-slate-700 h-24 rounded-lg flex items-center justify-center text-slate-400 font-semibold">CRM</div>
-                   <div className="bg-slate-700 h-24 rounded-lg flex items-center justify-center text-slate-400 font-semibold">电商</div>
-                   <div className="bg-slate-700 h-24 rounded-lg flex items-center justify-center text-slate-400 font-semibold">OA</div>
-                   <div className="bg-brand-600 h-24 rounded-lg flex items-center justify-center text-white font-bold shadow-lg scale-105 z-10">捷耀ERP</div>
-                   <div className="bg-slate-700 h-24 rounded-lg flex items-center justify-center text-slate-400 font-semibold">银行</div>
-                   <div className="bg-slate-700 h-24 rounded-lg flex items-center justify-center text-slate-400 font-semibold">MES</div>
+                   <div className="bg-slate-700 h-24 rounded-lg flex items-center justify-center text-slate-400 font-semibold">PLC设备</div>
+                   <div className="bg-slate-700 h-24 rounded-lg flex items-center justify-center text-slate-400 font-semibold">移动手持</div>
+                   <div className="bg-slate-700 h-24 rounded-lg flex items-center justify-center text-slate-400 font-semibold">钉钉办公</div>
+                   <div className="bg-brand-600 h-24 rounded-lg flex items-center justify-center text-white font-bold shadow-lg scale-105 z-10 text-lg">捷耀ERP</div>
+                   <div className="bg-slate-700 h-24 rounded-lg flex items-center justify-center text-slate-400 font-semibold">银企直连</div>
+                   <div className="bg-slate-700 h-24 rounded-lg flex items-center justify-center text-slate-400 font-semibold">物流接口</div>
                 </div>
              </div>
            </div>

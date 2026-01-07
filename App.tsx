@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -7,14 +8,15 @@ import FeaturesPage from './pages/FeaturesPage';
 import PricingPage from './pages/PricingPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import AdminDashboard from './pages/AdminDashboard';
+import CasesPage from './pages/CasesPage';
+
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
-  
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
   return null;
 };
 
@@ -31,6 +33,8 @@ const App: React.FC = () => {
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/cases" element={<CasesPage />} />
           </Routes>
         </main>
         <Footer />
