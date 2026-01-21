@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { ArrowRight, ShieldCheck, Zap, Monitor, PhoneCall } from 'lucide-react';
+import { ArrowRight, Monitor, PhoneCall } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
@@ -18,18 +17,18 @@ const Hero: React.FC = () => {
           <div className="flex-1 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs sm:text-sm font-bold mb-6 border border-slate-200 animate-fade-in-up">
               <Monitor size={14} className="text-brand-600" />
-              <span>工信国际 (gxgjsoft) 官方技术支持</span>
+              <span>企业数字化转型首选伙伴</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 mb-6 leading-[1.1]">
-              捷耀ERP<br />
+              桂捷ERP<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-blue-600 to-indigo-600">
                 定义数字化未来
               </span>
             </h1>
             
             <p className="max-w-2xl mx-auto lg:mx-0 text-lg md:text-xl text-slate-600 mb-10 leading-relaxed">
-              整合生产、供应链、财务与人力资源。专为 Windows 架构优化的企业级 ERP，助力您的企业实现数字化跨越。
+              整合生产、供应链、财务与人力资源。专为企业级架构优化，助力您的企业实现数字化跨越。
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-12">
@@ -40,13 +39,13 @@ const Hero: React.FC = () => {
                 免费预约演示
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a 
-                href="tel:19337226600"
+              <Link 
+                to="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 transition-all duration-300"
               >
                 <PhoneCall className="mr-2 h-5 w-5 text-brand-600" />
-                19337226600
-              </a>
+                联系我们
+              </Link>
             </div>
 
             {/* 信任背书栏 */}
@@ -79,7 +78,7 @@ const Hero: React.FC = () => {
                     <div className="w-3 h-3 rounded-full bg-green-400"></div>
                   </div>
                   <div className="bg-white px-3 py-1 rounded-md border border-slate-200 text-[10px] text-slate-400 flex-grow text-center mx-4 max-w-[300px] truncate">
-                    www.gxgjsoft.cn/console
+                    Console Dashboard
                   </div>
                   <div className="flex gap-2">
                     <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
@@ -87,7 +86,7 @@ const Hero: React.FC = () => {
                 </div>
                 <img 
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" 
-                  alt="Jieyao ERP Intelligence Center" 
+                  alt="Guijie ERP Intelligence Center" 
                   className="w-full h-auto object-cover"
                 />
               </div>

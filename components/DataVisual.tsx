@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { Activity, Server, Cpu, HardDrive } from 'lucide-react';
@@ -31,7 +30,7 @@ const DataVisual: React.FC = () => {
               智能监测，实时洞察
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              捷耀ERP不仅管理业务，更实时关注您的基础设施安全。内置BI引擎提供毫秒级的数据响应。
+              桂捷ERP不仅管理业务，更实时关注您的基础设施安全。内置BI引擎提供毫秒级的数据响应。
             </p>
         </div>
 
@@ -121,7 +120,7 @@ const DataVisual: React.FC = () => {
             <div className="mt-10 p-4 bg-slate-800/50 rounded-xl border border-slate-700">
                 <p className="text-[10px] text-slate-500 uppercase tracking-widest mb-2 font-bold">最近部署</p>
                 <div className="flex items-center justify-between text-xs">
-                    <span className="text-slate-300">捷耀ERP核心 v3.0.4</span>
+                    <span className="text-slate-300">桂捷ERP核心 v3.0.4</span>
                     <span className="text-slate-500 italic">2小时前</span>
                 </div>
             </div>

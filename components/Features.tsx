@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Package, DollarSign, Users, PieChart, Factory, Truck } from 'lucide-react';
 import { Feature } from '../types';
@@ -47,7 +46,7 @@ const Features: React.FC = () => {
             专为现代化企业打造的数字化基座
           </p>
           <p className="mt-4 max-w-2xl text-xl text-slate-500 mx-auto">
-            捷耀ERP提供从生产到销售的一体化闭环管理，打破信息孤岛，实现真正的效率跨越。
+            桂捷ERP提供从生产到销售的一体化闭环管理，打破信息孤岛，实现真正的效率跨越。
           </p>
         </div>
 

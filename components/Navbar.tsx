@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, BarChart2, Globe } from 'lucide-react';
@@ -38,7 +37,7 @@ const Navbar: React.FC = () => {
               <BarChart2 size={24} />
             </div>
             <div className="flex flex-col">
-              <span className="font-black text-xl tracking-tighter text-slate-800 leading-none">捷耀ERP</span>
+              <span className="font-black text-xl tracking-tighter text-slate-800 leading-none">桂捷ERP</span>
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">Industrial ERP</span>
             </div>
           </Link>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
@@ -25,7 +24,7 @@ const Home: React.FC = () => {
                         <Star size={16} fill="currentColor" /> 明星合作案例
                     </div>
                     <h3 className="text-3xl md:text-4xl font-black text-white mb-4">
-                        浪潮软件 & 捷耀科技<br/>纸品行业联合解决方案
+                        浪潮软件 & 桂捷科技<br/>纸品行业联合解决方案
                     </h3>
                     <p className="text-slate-400 mb-8 leading-relaxed text-lg">
                         专为纸厂及纸贸公司研发。完美解决分切成本计算、多计量单位自动换算等行业痛点。

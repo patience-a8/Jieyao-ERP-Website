@@ -7,7 +7,6 @@ const ContactForm: React.FC = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Formspree ID：已为您配置。如果想改收件箱，请去 formspree.io 注册并替换此 ID
   const FORMSPREE_ID: string = "xpzeoovz"; 
   const FORMSPREE_URL = `https://formspree.io/f/${FORMSPREE_ID}`;
 
@@ -19,15 +18,12 @@ const ContactForm: React.FC = () => {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
 
-    // --- 核心逻辑：本地“数据库”备份 ---
     const saveToLocal = () => {
       try {
+        const timestamp = new Date().toLocaleString('zh-CN', { hour12: false });
+        // 仅保存客户线索
         const existingLeads = JSON.parse(localStorage.getItem('jieyao_leads') || '[]');
-        const newLead = { 
-          ...data, 
-          id: Date.now(), 
-          date: new Date().toLocaleString('zh-CN', { hour12: false }) 
-        };
+        const newLead = { ...data, id: Date.now(), date: timestamp };
         localStorage.setItem('jieyao_leads', JSON.stringify([newLead, ...existingLeads]));
       } catch (e) {
         console.error("本地数据库写入失败", e);
@@ -48,9 +44,9 @@ const ContactForm: React.FC = () => {
         throw new Error('网络请求未响应');
       }
     } catch (err) {
-      // 容错：即使邮件接口挂了，本地也得存一份，保证不丢单
+      // 降级处理：即使接口失败也保存到本地
       saveToLocal();
-      setError('提示：邮件发送异常，但系统已在本地为您留档。您也可以直接致电：025-51819281');
+      setError('提示：演示接口暂不可用，但系统已在本地为您记录。');
     } finally {
       setIsSubmitting(false);
     }
@@ -64,7 +60,7 @@ const ContactForm: React.FC = () => {
         </div>
         <h3 className="text-2xl font-bold text-slate-900 mb-4">咨询提交成功！</h3>
         <p className="text-slate-500 max-w-xs mb-8">
-          我们将尽快安排资深顾问为您回电。如有急需，请拨打刘经理电话。
+          我们将尽快安排资深顾问为您回电。
         </p>
         <button onClick={() => setIsSuccess(false)} className="px-6 py-2 bg-slate-100 text-slate-600 rounded-lg hover:bg-slate-200 transition-colors">
             返回
@@ -77,7 +73,7 @@ const ContactForm: React.FC = () => {
     <div className="bg-white rounded-2xl shadow-xl p-8 border border-slate-100">
       <div className="mb-6">
         <h3 className="text-2xl font-bold text-slate-900">获取定制化解决方案</h3>
-        <p className="text-slate-500 text-sm mt-1">提交需求后，我们的专家将在2小时内与您联系</p>
+        <p className="text-slate-500 text-sm mt-1">提交需求后，我们的专家将在24小时内与您联系</p>
       </div>
       
       {error && (
@@ -106,7 +102,7 @@ const ContactForm: React.FC = () => {
 
         <div className="space-y-1.5">
           <label className="text-sm font-bold text-slate-700 ml-1">需求描述</label>
-          <textarea required name="message" rows={3} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 outline-none transition-all resize-none" placeholder="请简述您想解决的管理痛点..." />
+          <textarea required name="message" rows={3} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 outline-none transition-all resize-none" placeholder="请简述您的管理需求..." />
         </div>
 
         <button type="submit" disabled={isSubmitting} className="w-full flex items-center justify-center bg-brand-600 hover:bg-brand-700 disabled:bg-slate-300 text-white font-bold py-4 rounded-xl transition-all shadow-lg active:scale-[0.98]">
@@ -117,13 +113,6 @@ const ContactForm: React.FC = () => {
           )}
         </button>
       </form>
-      
-      <div className="mt-6 pt-6 border-t border-slate-50 flex flex-col items-center gap-2">
-        <div className="flex items-center text-slate-400">
-            <PhoneCall size={14} className="mr-2" />
-            <span className="text-xs italic">或者直接拨打：<a href="tel:025-51819281" className="text-brand-600 font-bold hover:underline not-italic">025-51819281 (刘经理)</a></span>
-        </div>
-      </div>
     </div>
   );
 };

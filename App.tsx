@@ -11,7 +11,6 @@ import ContactPage from './pages/ContactPage';
 import AdminDashboard from './pages/AdminDashboard';
 import CasesPage from './pages/CasesPage';
 
-
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   React.useEffect(() => {

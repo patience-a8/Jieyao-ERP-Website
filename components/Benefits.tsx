@@ -40,7 +40,7 @@ const Benefits: React.FC = () => {
     <section id="benefits" className="py-20 bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-            <h2 className="text-brand-400 font-semibold tracking-wide uppercase text-sm">为什么选择捷耀</h2>
+            <h2 className="text-brand-400 font-semibold tracking-wide uppercase text-sm">为什么选择桂捷</h2>
             <h3 className="mt-2 text-3xl font-extrabold sm:text-4xl">打造敏捷型企业的坚实基石</h3>
         </div>
         
