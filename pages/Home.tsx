@@ -1,87 +1,170 @@
-import React from 'react';
-import Hero from '../components/Hero';
-import Features from '../components/Features';
-import DataVisual from '../components/DataVisual';
-import Benefits from '../components/Benefits';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Star } from 'lucide-react';
+import React from "react";
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+import DataVisual from "../components/DataVisual";
+import Benefits from "../components/Benefits";
+import { Phone, MapPin, Mail, QrCode, Building2 } from "lucide-react";
 
 const Home: React.FC = () => {
   return (
     <>
       <Hero />
-      <Features />
-      
-      {/* Featured Case Study Section */}
-      <section className="py-16 bg-white border-y border-slate-100">
+
+      {/* Company Profile Section */}
+      <section className="py-16 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-slate-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row relative">
-                {/* Background Decor */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-red-600 rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
-                
-                <div className="p-8 md:p-12 flex-1 flex flex-col justify-center relative z-10">
-                    <div className="inline-flex items-center gap-2 text-red-400 font-bold text-sm mb-4 uppercase tracking-widest">
-                        <Star size={16} fill="currentColor" /> 明星合作案例
-                    </div>
-                    <h3 className="text-3xl md:text-4xl font-black text-white mb-4">
-                        浪潮软件 & 桂捷科技<br/>纸品行业联合解决方案
-                    </h3>
-                    <p className="text-slate-400 mb-8 leading-relaxed text-lg">
-                        专为纸厂及纸贸公司研发。完美解决分切成本计算、多计量单位自动换算等行业痛点。
-                    </p>
-                    <div>
-                        <Link 
-                            to="/cases" 
-                            className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-xl font-bold hover:bg-slate-100 transition-colors"
-                        >
-                            查看案例详情 <ArrowRight size={18} />
-                        </Link>
-                    </div>
-                </div>
-                <div className="flex-1 bg-slate-800 relative min-h-[300px]">
-                    <img 
-                        src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" 
-                        alt="Industry Case" 
-                        className="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity duration-500"
-                    />
-                    <div className="absolute bottom-6 left-6 bg-red-600/90 backdrop-blur text-white px-4 py-2 rounded-lg text-xs font-bold shadow-lg">
-                        Paper Industry Solution
-                    </div>
-                </div>
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-brand-50 text-brand-700 font-semibold text-sm mb-4">
+              <Building2 className="w-4 h-4 mr-2" />
+              公司简介
             </div>
+            <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
+              我们是一家综合性公司
+            </h2>
+          </div>
+          <div className="prose prose-lg text-slate-600 mx-auto text-justify leading-relaxed max-w-4xl bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+            <p className="mb-6">
+              广西桂捷软件开发有限公司，南京捷耀软件开发有限公司均由孔令伟、刘春艳夫妇共同设立。
+            </p>
+            <p className="mb-6">
+              <strong>捷耀软件</strong>
+              成立于2015年，专注于企业ERP软件销售，企业大型数据库如SQL
+              SERVER、ORACLE等国际知名数据库销售及售后技术支持。目前捷耀有员工30名，公司业务分布江苏、四川、河南、广西、广东等省份。
+            </p>
+            <p className="mb-6">
+              <strong>桂捷软件</strong>
+              成立于2021年，主要业务为智能设备研发、销售、玩具、成人玩具、初级农产品、企业管理咨询、信息化前沿技术研究等业务。公司立足于广西，面向东盟地区开展业务，目前在南宁同广西投资集团、广西农垦集团、广西产投集团、广西林业集团、广西轨道交通集团等建立广泛业务合作。
+            </p>
+            <p>
+              未来五年，公司计划将业务开展至全国及东盟地区，希望更多的专业人员加盟桂捷，欢迎您的加入！
+            </p>
+          </div>
         </div>
       </section>
 
+      <Features />
       <DataVisual />
       <Benefits />
-      
-      {/* Home specific CTA */}
-      <section className="bg-slate-50 border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-brand-600 rounded-3xl shadow-2xl overflow-hidden relative">
-            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-brand-500 rounded-full blur-3xl opacity-50"></div>
-            <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-brand-700 rounded-full blur-3xl opacity-50"></div>
-            
-            <div className="relative px-6 py-12 md:px-12 md:py-16 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8">
-              <div>
-                <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-                  准备好开启数字化转型了吗？
-                </h2>
-                <p className="mt-4 text-lg text-brand-100 max-w-2xl">
-                  立即联系我们的专家团队，预约一对一产品演示，定制您的专属解决方案。
-                </p>
+
+      {/* Detailed Contact Section (Replaces previous CTA) */}
+      <section className="bg-slate-900 py-20 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">联系我们</h2>
+            <div className="w-24 h-1 bg-brand-500 mx-auto rounded-full"></div>
+          </div>
+
+          {/* Phones - One line, spaced out */}
+          <div className="mb-16 text-center">
+            <p className="text-brand-400 font-bold uppercase tracking-widest text-sm mb-6">
+              咨询热线
+            </p>
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-2xl md:text-3xl font-black font-mono">
+              <a
+                href="tel:17721531163"
+                className="hover:text-brand-400 transition-colors"
+              >
+                177 2153 1163
+              </a>
+              <a
+                href="tel:17761723165"
+                className="hover:text-brand-400 transition-colors"
+              >
+                177 6172 3165
+              </a>
+              <a
+                href="tel:19337226600"
+                className="hover:text-brand-400 transition-colors"
+              >
+                193 3722 6600
+              </a>
+              <a
+                href="tel:19337233927"
+                className="hover:text-brand-400 transition-colors"
+              >
+                193 3723 3927
+              </a>
+            </div>
+            <div className="mt-8 flex flex-wrap justify-center gap-8 text-slate-400">
+              <a
+                href="mailto:779294618@qq.com"
+                className="flex items-center gap-2 hover:text-white transition-colors"
+              >
+                <Mail size={18} /> 779294618@qq.com
+              </a>
+              <a
+                href="mailto:345542276@qq.com"
+                className="flex items-center gap-2 hover:text-white transition-colors"
+              >
+                <Mail size={18} /> 345542276@qq.com
+              </a>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-12 items-start">
+            {/* Addresses - Grid of 6 */}
+            <div className="lg:col-span-2">
+              <div className="flex items-center gap-2 mb-8">
+                <MapPin className="text-brand-400" />
+                <h3 className="text-xl font-bold">公司地址</h3>
               </div>
-              <div className="flex-shrink-0">
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-lg text-brand-600 bg-white hover:bg-brand-50 transition-colors shadow-lg"
-                >
-                  预约演示
-                  <div className="ml-2 -mr-1 h-5 w-5 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                  </div>
-                </Link>
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* 6 Addresses */}
+                <div className="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-brand-500/50 transition-colors">
+                  <p className="text-brand-400 font-bold mb-2">江苏 — 南京</p>
+                  <p className="text-slate-300 text-sm">
+                    南京市江北新区浦滨路150号中科创新广场3#2F
+                  </p>
+                </div>
+                <div className="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-brand-500/50 transition-colors">
+                  <p className="text-brand-400 font-bold mb-2">广西 — 南宁</p>
+                  <p className="text-slate-300 text-sm">
+                    南宁市金龙路2号南宁万科大厦B座546号
+                  </p>
+                </div>
+                <div className="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-brand-500/50 transition-colors">
+                  <p className="text-brand-400 font-bold mb-2">江苏 — 常州</p>
+                  <p className="text-slate-300 text-sm">
+                    常州市新北区清水湾32栋甲单元10楼1005
+                  </p>
+                </div>
+                <div className="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-brand-500/50 transition-colors">
+                  <p className="text-brand-400 font-bold mb-2">江苏 — 无锡</p>
+                  <p className="text-slate-300 text-sm">
+                    无锡市新吴区梅村张公路25号6楼601
+                  </p>
+                </div>
+                <div className="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-brand-500/50 transition-colors">
+                  <p className="text-brand-400 font-bold mb-2">广东 — 广州</p>
+                  <p className="text-slate-300 text-sm">
+                    广州市南沙区越秀国际总部广场一区三栋1312房
+                  </p>
+                </div>
+                <div className="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-brand-500/50 transition-colors">
+                  <p className="text-brand-400 font-bold mb-2">深圳</p>
+                  <p className="text-slate-300 text-sm">
+                    深圳市南山区深圳湾创新科技中心2栋A座59层5909
+                  </p>
+                </div>
               </div>
+            </div>
+
+            {/* QR Code */}
+            <div className="bg-white text-slate-900 rounded-3xl p-8 text-center shadow-2xl lg:mt-0">
+              <div className="bg-brand-50 w-full aspect-square rounded-2xl flex items-center justify-center mb-6 border border-brand-100 overflow-hidden">
+                <img
+                  src="/images/guijie-QR.jpg"
+                  alt="客服微信二维码"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+
+              <h3 className="font-bold text-xl mb-2">微信咨询</h3>
+              <p className="text-slate-500 text-sm">
+                扫码添加客服微信
+                <br />
+                获取一对一专业服务
+              </p>
             </div>
           </div>
         </div>
